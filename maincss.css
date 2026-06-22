@@ -9,7 +9,8 @@ margin-bottom:350px;
 
 div img {
   display: inline-block;
-  width: 20%;
+  /* width: 20%; */
+  height: 75vh;
   margin: 2%;
   align-items: center;
   justify-content: center;

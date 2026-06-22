@@ -2,16 +2,43 @@
 <html>
 <head>
   <link rel="stylesheet" href="maincss.css">
+  <style>
+  img {
+   height: 90vh;
+  }
+  body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  .contain {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+  </style>
 </head>
 
 <body style="background-color:black;">
+<div class="contain">
 <img style="margin-bottom:100px;" id="AR" src="AR-.png">
 <a href="index.html"><button>Back</button></a>
+</div>
 </body>
 <script>
 const urlquery = new URLSearchParams(location.search).get("id");
 document.addEventListener("DOMContentLoaded", () => {
    document.getElementById("AR").src = "AR" + urlquery + ".png" ;
+});
+const card = document.getElementById("AR");
+card.addEventListener("click", () => {
+			const match = card.src.match(/AR([1-6])\.png$/);
+			let num = match ? parseInt(match[1]) : 1;
+	
+			num = (num % 6) + 1; // cycle 1→2→3→4→5→6→1
+	
+			card.src = `AR${num}.png`;
 });
 </script>
 </html>
