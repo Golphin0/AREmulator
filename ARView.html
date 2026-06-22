@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="maincss.css">
+</head>
+
+<body style="background-color:black;">
+<img style="margin-bottom:100px;" id="AR" src="AR-.png">
+<a href="index.html"><button>Back</button></a>
+</body>
+<script>
+const urlquery = new URLSearchParams(location.search).get("id");
+document.addEventListener("DOMContentLoaded", () => {
+   document.getElementById("AR").src = "AR" + urlquery + ".png" ;
+});
+</script>
+</html>

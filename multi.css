@@ -1,0 +1,38 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: black;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  max-height: 100vh;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.card {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Images scale so all cards fit vertically */
+.card img {
+  height: calc((100vh - 200px) / 3); /* adjust 3 = max number of rows you expect */
+  width: auto;
+  border-radius: 10px;
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
