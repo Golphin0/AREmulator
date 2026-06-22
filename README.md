@@ -6,4 +6,5 @@ TO-DO:
 * Add the AR Booklet for *Spirit Camera: The Cursed Memoir*
 * Add the *Photos With Mario* Cards
 * Add the *Kid Icarus: Uprising* Cards
-* Add other Unique AR Cards from [This Page](https://nintendo.fandom.com/wiki/AR_Cards) and possibly [This Page.](https://www.reddit.com/r/3dspiracy/comments/1k1bljf/all_ar_cards_for_nintendo_3ds/)
+* Add other Unique AR Cards from [This Page](https://nintendo.fandom.com/wiki/AR_Cards) and possibly [This Page](https://www.reddit.com/r/3dspiracy/comments/1k1bljf/all_ar_cards_for_nintendo_3ds/)
+* Rework the overall UI entirely -- its current state is very distasteful
