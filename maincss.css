@@ -1,12 +1,15 @@
+body {
+ background-color:#000000;
+}
+
 img {
 margin-top:350px;
 margin-bottom:350px;
-border-radius:70px;
 }
 
 div img {
-  display: block;
-  width: 45%;
+  display: inline-block;
+  width: 20%;
   margin: 2%;
   align-items: center;
   justify-content: center;
@@ -15,8 +18,10 @@ div img {
 button {
   color: black;
   background-color: white;
-  border-radius:70px;
-  display:block;
+  border-radius:18px;
+  display: inline-block;
+  margin: 0px 20px;
+  padding: 15px 20px;
   font-size:50px;
 }
 
