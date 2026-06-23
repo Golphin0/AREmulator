@@ -42,5 +42,15 @@ for (let i = 1; i <= 6; i++) {
 document.querySelectorAll("img").forEach(img => {
     img.style.height = (90 / limit) + "vh";
 });
+async function keepAwake() {
+    try {
+        wakeLock = await navigator.wakeLock.request('screen');
+        console.log('Wake Lock active');
+    } catch (err) {
+        console.error(err);
+        alert(err);
+    }
+}
+keepAwake();
 </script>
 </html>
