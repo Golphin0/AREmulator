@@ -36,9 +36,19 @@ card.addEventListener("click", () => {
 			const match = card.src.match(/AR([1-6])\.png$/);
 			let num = match ? parseInt(match[1]) : 1;
 	
-			num = (num % 6) + 1; // cycle 1→2→3→4→5→6→1
+			num = (num % 6) + 1;
 	
 			card.src = `AR${num}.png`;
 });
+async function keepAwake() {
+    try {
+        wakeLock = await navigator.wakeLock.request('screen');
+        console.log('Wake Lock active');
+    } catch (err) {
+        console.error(err);
+        alert(err);
+    }
+}
+keepAwake();
 </script>
 </html>
