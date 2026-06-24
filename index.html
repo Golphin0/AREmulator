@@ -2,33 +2,64 @@
 <html>
 <head>
   <link rel="stylesheet" href="maincss.css">
-  <style>
-	img {
-	border-radius:20px;
-	}
-	
-	button {
-	 margin-bottom:5%;
-	}
-  </style>
+<style>
+  img {
+    border-radius: 20px;
+    width: 80%;
+    height: auto !important;
+  }
+
+  button {
+    margin-bottom: 5%;
+  }
+
+  .card-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0.4%;
+  }
+</style>
 </head>
 
 <body>
 <h1 style="color:white;">AREmulator: AR Card Emulation For 3ds Family</h1>
 <h3>Select a Card:</h3>
-<div>
-<a href="ARView.html?id=1"><img src="AR1.png"></a>
-<a href="ARView.html?id=2"><img src="AR2.png"></a>
-<a href="ARView.html?id=3"><img src="AR3.png"></a>
-<a href="ARView.html?id=4"><img src="AR4.png"></a>
-<a href="ARView.html?id=5"><img src="AR5.png"></a>
-<a href="ARView.html?id=6"><img src="AR6.png"></a>
+<div class="card-section">
+  <h2>Main AR Cards:</h2>
+  <div class="row">
+    <a href="ARView.html?type=MAIN&id=1"><img src="MainCards/AR1.png"></a>
+    <a href="ARView.html?type=MAIN&id=2"><img src="MainCards/AR2.png"></a>
+    <a href="ARView.html?type=MAIN&id=3"><img src="MainCards/AR3.png"></a>
+    <a href="ARView.html?type=MAIN&id=4"><img src="MainCards/AR4.png"></a>
+    <a href="ARView.html?type=MAIN&id=5"><img src="MainCards/AR5.png"></a>
+    <a href="ARView.html?type=MAIN&id=6"><img src="MainCards/AR6.png"></a>
+  </div>
 </div>
+
+<div class="card-section">
+  <h2>Photos With Mario Cards:</h2>
+  <div class="row">
+    <a href="ARView.html?type=PWM&id=1"><img src="PhotosWMario/PWM1.png"></a>
+    <a href="ARView.html?type=PWM&id=2"><img src="PhotosWMario/PWM2.png"></a>
+    <a href="ARView.html?type=PWM&id=3"><img src="PhotosWMario/PWM3.png"></a>
+    <a href="ARView.html?type=PWM&id=4"><img src="PhotosWMario/PWM4.png"></a>
+    <a href="ARView.html?type=PWM&id=5"><img src="PhotosWMario/PWM5.png"></a>
+    <a href="ARView.html?type=PWM&id=6"><img src="PhotosWMario/PWM6.png"></a>
+  </div>
+</div>
+<div>
 <a href="multicard.html?cds=2"><button>2 Cards</button></a>
 <a href="multicard.html?cds=3"><button>3 Cards</button></a>
 <a href="multicard.html?cds=4"><button>4 Cards</button></a>
 <a href="multicard.html?cds=5"><button>5 Cards</button></a>
 <a href="multicard.html?cds=6"><button>6 Cards</button></a>
-<br><br><br><br><br><br><br><br><br><br><br>
+</div>
 </body>
 </html>

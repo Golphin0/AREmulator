@@ -3,12 +3,22 @@
 <head>
   <link rel="stylesheet" href="maincss.css">
   <style>
+  body {
+   flex-direction: column;
+  }
+  
+  div {
+   width: 100% !important;
+  }
   </style>
 </head>
 
 <body>
-<h1 style="color:white;">AREmulator: AR Card Emulation For 3ds Family -- Multicard</h1>
-<h3>Select a Card:</h3>
+<div style="flex-direction: column;">
+<h1 style="color:white;">AREmulator -- Multicard</h1>
+<h3 style="color:white;">Click a card to change it!</h3>
+</div>
+<br>
 <div>
 <img src="AR-.png" id="crd1">
 <img src="AR-.png" id="crd2">
@@ -30,17 +40,18 @@ for (let i = 1; i <= 6; i++) {
         card.remove();
     } else {
 		card.addEventListener("click", () => {
-			const match = card.src.match(/AR([1-6])\.png$/);
+			const match = card.src.match(/MainCards\/AR([1-6])\.png$/);
 			let num = match ? parseInt(match[1]) : 1;
 	
 			num = (num % 6) + 1; // cycle 1→2→3→4→5→6→1
 	
-			card.src = `AR${num}.png`;
+			card.src = `MainCards/AR${num}.png`;
 		});
 	}
 }
 document.querySelectorAll("img").forEach(img => {
-    img.style.height = (90 / limit) + "vh";
+    img.style.width = (50 / limit) + "vw";
+    img.style.height = "auto";
 });
 async function keepAwake() {
     try {
